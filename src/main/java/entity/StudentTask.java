@@ -76,6 +76,7 @@ public class StudentTask implements java.io.Serializable {
         this.statusDate = statusDate;
     }
 
+    @Override
     public String toString() {
         return "Статус: " + this.getStatus();
     }

@@ -18,10 +18,11 @@ public class Task_3 {
 
         //Для БД: SET GLOBAL time_zone = '+3:00';
 
+        //3. Update. Добавить задания студентам от курсов, на которые подписаны
+
         List<Student> students = session.createQuery("FROM Student").list();
         List<StudentTask> studentTasks = session.createQuery("FROM StudentTask").list();
 
-        //3. Update. Добавить задания студентам от курсов, на которые подписаны
         boolean step = false;
 
         for (Student student : students) {

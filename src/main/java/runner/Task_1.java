@@ -19,6 +19,7 @@ public class Task_1 {
         Transaction transaction = session.beginTransaction();
 
         //Для БД: SET GLOBAL time_zone = '+3:00';
+
         //1. Вывести спиок студентов, выбрать одного и вывести его задания из курсов
 
         List<Student> students = session.createQuery("FROM Student").list();

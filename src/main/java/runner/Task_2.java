@@ -2,8 +2,6 @@ package runner;
 
 import entity.Course;
 import entity.Student;
-import entity.Task;
-import entity.Theory;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -20,9 +18,9 @@ public class Task_2 {
 
         //Для БД: SET GLOBAL time_zone = '+3:00';
 
-        List<Student> students = session.createQuery("FROM Student").list();
-
         //2. Вывести список подписок на курсы каждого студента и прибыль от него
+
+        List<Student> students = session.createQuery("FROM Student").list();
 
         double expenses = 0;
 

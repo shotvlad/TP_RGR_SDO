@@ -96,4 +96,11 @@ public class Course implements java.io.Serializable {
     public void setTheories(List<Theory> theories) {
         this.theories = theories;
     }
+
+    @Override
+    public String toString(){
+        return "Название курса: " + this.getName() + "\n" +
+                "Информация: " + this.getInfo() + "\n" +
+                "Стоимость: " + this.getPrice();
+    }
 }
