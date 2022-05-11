@@ -6,7 +6,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import utils.NewHibernateUtil;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 import java.util.Scanner;
@@ -22,7 +21,6 @@ public class Task_5 {
 
         //5. Вывести не выполненые задания и студента, кому оно принадлежит
 
-        List<Student> students = session.createQuery("FROM Student").list();
         List<Course> courses = session.createQuery("FROM Course").list();
         List<StudentTask> studentTasks = session.createQuery("FROM StudentTask").list();
 
@@ -34,8 +32,6 @@ public class Task_5 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Выберите ID курса: ");
         int enter = scanner.nextInt();
-
-        boolean bool = false;
 
         for (StudentTask studentTask : studentTasks) {
             if (studentTask.getTask().getTheory().getCourse().getCourseNum() == enter && Objects.equals(studentTask.getStatus(), "Не выполнено")) {
