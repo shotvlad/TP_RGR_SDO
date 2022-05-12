@@ -11,12 +11,10 @@ import java.util.List;
 
 public class Task_3 {
 
-    public static void main(String[] args) {
+    public Task_3() {
         SessionFactory sf = NewHibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Transaction transaction = session.beginTransaction();
-
-        //Для БД: SET GLOBAL time_zone = '+3:00';
 
         //3. Update. Добавить задания студентам от курсов, на которые подписаны
 

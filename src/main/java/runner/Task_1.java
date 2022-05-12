@@ -13,14 +13,14 @@ import java.util.Scanner;
 
 public class Task_1 {
 
-    public static void main(String[] args) {
+    public Task_1() {
         SessionFactory sf = NewHibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Transaction transaction = session.beginTransaction();
 
         //Для БД: SET GLOBAL time_zone = '+3:00';
 
-        //1. Вывести спиок студентов, выбрать одного и вывести его задания из курсов
+        //1. Вывести список студентов, выбрать одного и вывести его задания из курсов
 
         List<Student> students = session.createQuery("FROM Student").list();
 

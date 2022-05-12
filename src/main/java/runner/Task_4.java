@@ -10,12 +10,10 @@ import java.util.List;
 
 public class Task_4 {
 
-    public static void main(String[] args) {
+    public Task_4() {
         SessionFactory sf = NewHibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Transaction transaction = session.beginTransaction();
-
-        //Для БД: SET GLOBAL time_zone = '+3:00';
 
         //4. Вывести курс, имеющие в информации интерисующие данные (Пример: акция, Python, не дорого)
 

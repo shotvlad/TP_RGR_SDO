@@ -12,12 +12,10 @@ import java.util.Scanner;
 
 public class Task_5 {
 
-    public static void main(String[] args) {
+    public Task_5() {
         SessionFactory sf = NewHibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Transaction transaction = session.beginTransaction();
-
-        //Для БД: SET GLOBAL time_zone = '+3:00';
 
         //5. Вывести не выполненые задания и студента, кому оно принадлежит
 

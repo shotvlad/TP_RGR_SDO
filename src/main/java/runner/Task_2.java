@@ -11,12 +11,10 @@ import java.util.List;
 
 public class Task_2 {
 
-    public static void main(String[] args) {
+    public Task_2() {
         SessionFactory sf = NewHibernateUtil.getSessionFactory();
         Session session = sf.openSession();
         Transaction transaction = session.beginTransaction();
-
-        //Для БД: SET GLOBAL time_zone = '+3:00';
 
         //2. Вывести список подписок на курсы каждого студента и прибыль от него
 
